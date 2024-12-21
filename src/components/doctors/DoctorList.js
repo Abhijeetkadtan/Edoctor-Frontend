@@ -1,9 +1,12 @@
 // src/components/doctors/DoctorList.js
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom"; // Change to useNavigate
+import './DoctorList.css'; // Create a CSS file for styling
 
 const DoctorList = () => {
     const [doctors, setDoctors] = useState([]);
+    const navigate = useNavigate(); // Get the navigate function for navigation
 
     useEffect(() => {
         const fetchDoctors = async () => {
@@ -18,16 +21,25 @@ const DoctorList = () => {
         fetchDoctors();
     }, []);
 
+    const handleBookAppointment = (doctorId) => {
+        // Redirect to the ScheduleAppointment page with the selected doctor's ID
+        navigate(`/appointments/schedule/${doctorId}`); // Use navigate function instead of history.push
+    };
+
     return (
-        <div>
+        <div className="doctor-list">
             <h2>Available Doctors</h2>
-            <ul>
+            <div className="doctor-cards-container">
                 {doctors.map((doctor) => (
-                    <li key={doctor.id}>
-                        {doctor.name} - {doctor.specialization}
-                    </li>
+                    <div className="doctor-card" key={doctor.id}>
+                        <h3>{doctor.name}</h3>
+                        <p>Specialty: {doctor.specialization}</p>
+                        <p>Location: {doctor.location}</p>
+                        <p>Rating:⭐⭐⭐⭐ {doctor.rating}</p>
+                        <button onClick={() => handleBookAppointment(doctor.id)}>Book Appointment</button>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };

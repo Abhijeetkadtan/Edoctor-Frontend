@@ -1,4 +1,4 @@
-/* src/pages/Home.css */
+/* src/pages/Home.css
 .home-container {
     text-align: center;
     padding: 50px;
@@ -28,4 +28,88 @@
   
   .home-container a:hover {
     background-color: #0056b3;
-  }
+  } */
+  /* Home Container */
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+/* Carousel as Background */
+.carousel-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.carousel-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images cover the background area */
+}
+
+/* Foreground Content */
+.content-overlay {
+  position: relative;
+  z-index: 2; /* Places content above the carousel */
+  color: #fff;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%); /* Center content vertically */
+  width: 100%;
+  padding: 0 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Heading and Paragraph */
+.content-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); /* Adds a shadow for readability */
+  color: #333;
+}
+
+.content-overlay p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8); /* Adds a shadow for readability */
+  color: #555;
+}
+
+/* Buttons */
+.home-buttons {
+  display: flex;
+  justify-content: center; /* Centers the buttons horizontally */
+  gap: 1rem; /* Adds space between the buttons */
+}
+
+.home-buttons a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  width: auto; /* Prevents the buttons from taking the full width */
+  text-align: center;
+  white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.home-buttons a:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+
+/* Ensure Carousel Fills the Background */
+.carousel .slide {
+  background: none; /* Removes default background color from the carousel slides */
+}

@@ -1,0 +1,57 @@
+.payment-container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 400px; /* Ensure the container width is fixed */
+    background-color: #f9f9f9;
+    box-sizing: border-box; /* Include padding and borders in width */
+}
+
+.payment-container h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.card-field {
+    margin-bottom: 15px;
+}
+
+.card-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.card-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%; /* Ensure input takes full width */
+    box-sizing: border-box; /* Include padding and borders in width */
+    background-color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

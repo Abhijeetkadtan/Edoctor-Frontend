@@ -1,0 +1,133 @@
+/* Profile Container */
+
+.profile {
+    background: linear-gradient(135deg, #2eb5f8, #eff6ff, #efefef);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.profile-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url('https://img.freepik.com/free-vector/national-doctor-s-day-hand-drawn-background_23-2149438164.jpg?t=st=1734505897~exp=1734509497~hmac=5c0d2b97d6dc83df7c44e47effbf7f693ead6b1bbad7fe1f66c379302371e456&w=996');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Form Styling */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border 0.3s ease-in-out;
+    width: 97%;
+}
+
+.profile-input:focus {
+    border-color: #0097d7;
+    outline: none;
+}
+
+.update-button {
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #008dce;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.update-button:hover {
+    background-color: #004a98;
+}
+
+/* Error & Loading Messages */
+.error {
+    color: red;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.loading {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #4CAF50;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .profile-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    .profile-input {
+        font-size: 0.9rem;
+    }
+
+    .update-button {
+        font-size: 1rem;
+    }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Gradient Animation for Cool Background */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

@@ -1,10 +1,10 @@
-/* src/components/common/Navbar.css */
+/* src/components/common/Navbar.css
 nav {
     background-color: #007bff;
     color: white;
     padding: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
   
@@ -22,3 +22,97 @@ nav {
     font-size: 20px;
     font-weight: bold;
   }
+
+   */
+
+  /* Navbar Container */
+nav {
+  display: flex;
+  justify-content: space-between; /* Align content: logo/left on one side, links on the other */
+  align-items: center;
+  background-color: #007bff; /* Primary color */
+  padding: 1rem 2rem; /* Space inside navbar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: sticky; /* Sticks to top */
+  top: 0;
+  z-index: 10; /* Ensures it’s above other content */
+}
+
+/* Logo or Left-Side Content */
+nav a:first-child {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:first-child:hover {
+  color: #ffcc00; /* Highlight color for hover */
+}
+
+/* Navigation Links */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem; /* Space between links */
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffcc00; /* Highlight color for hover */
+  transform: translateY(-3px); /* Subtle upward movement on hover */
+}
+
+/* Right-Side Links */
+nav div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem; /* Space between links */
+}
+
+/* Animation for Links */
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #ffcc00; /* Underline color */
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%; /* Animate underline */
+}
+nav a[href="/register"] {
+  font-weight: bold; /* Explicitly set font weight for Register */
+  /* text-transform: uppercase; Optional: Make it uppercase for emphasis */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column; /* Stack content on small screens */
+      align-items: flex-start; /* Align items to start */
+      padding: 1rem;
+  }
+
+  nav div {
+      flex-direction: column; /* Stack links vertically */
+      width: 100%;
+      gap: 0.5rem;
+  }
+
+  nav a {
+      width: 100%;
+      text-align: left; /* Align text to the left */
+  }
+}

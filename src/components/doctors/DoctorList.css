@@ -1,0 +1,28 @@
+/* src/components/doctors/DoctorList.css */
+.doctor-list {
+    padding: 20px;
+    background-image: url('https://img.freepik.com/free-vector/national-doctor-s-day-hand-drawn-background_23-2149438164.jpg?t=st=1734505897~exp=1734509497~hmac=5c0d2b97d6dc83df7c44e47effbf7f693ead6b1bbad7fe1f66c379302371e456&w=996');
+    background-size: cover;
+    background-position: center;
+}
+
+.doctor-cards-container {
+    display: flex;                     /* Use flexbox for alignment */
+    flex-wrap: wrap;                  /* Allow cards to wrap */
+    justify-content: center;           /* Center the cards */
+}
+
+.doctor-card {
+    border: 1px solid #ccc;           /* Border for the card */
+    border-radius: 8px;               /* Rounded corners */
+    padding: 15px;                    /* Padding inside the card */
+    margin: 10px;                     /* Space between cards */
+    width: 200px;                     /* Fixed width for cards */
+    text-align: center;               /* Center text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.2s;       /* Smooth transition */
+}
+
+.doctor-card:hover {
+    transform: scale(1.05);           /* Scale effect on hover */
+}

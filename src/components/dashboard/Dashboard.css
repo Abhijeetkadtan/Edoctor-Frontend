@@ -1,4 +1,4 @@
-/* src/components/dashboard/Dashboard.css */
+/* src/components/dashboard/Dashboard.css
 .dashboard {
     padding: 20px;
     background: #fff;
@@ -19,4 +19,85 @@
   
   a:hover {
     text-decoration: underline;
+  } */
+
+  /* src/components/dashboard/Dashboard.css */
+
+/* General container styling */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* background: linear-gradient(to bottom, #f0f8ff, #87ceeb); */
+  background-image: url('https://img.freepik.com/free-vector/national-doctor-s-day-hand-drawn-background_23-2149438164.jpg?t=st=1734505897~exp=1734509497~hmac=5c0d2b97d6dc83df7c44e47effbf7f693ead6b1bbad7fe1f66c379302371e456&w=996');
+  background-size: cover;
+    background-position: center;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+}
+
+/* Title styling */
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* Link container styling */
+.dashboard-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Individual link styling */
+.dashboard-link {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #00a5d2;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for links */
+.dashboard-link:hover {
+  background-color: #0057a8;
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in animation */
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
   }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard-title {
+      font-size: 2rem;
+  }
+  .dashboard-link {
+      font-size: 1rem;
+      padding: 12px;
+  }
+}

@@ -23,6 +23,14 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+/* App.css */
+.Widget {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9999;  /* Ensure it floats on top */
+}
+
 
 .App-link {
   color: #61dafb;
