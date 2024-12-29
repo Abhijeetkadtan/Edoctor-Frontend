@@ -1,7 +1,3 @@
-/* src/components/auth/Login.css */
-
-
-
 /* Form Container */
 .form-container {
     width: 100%;
@@ -33,6 +29,11 @@ h2 {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Error Input Fields */
+.input-error {
+    border: 1px solid red !important;
+}
+
 /* Focused input fields */
 .form-container input:focus {
     border-color: #4caf50;
@@ -44,7 +45,7 @@ h2 {
 button {
     width: 100%;
     padding: 12px;
-    background-color: #4caf50;
+    background-color: #1952ba;
     color: white;
     border: none;
     border-radius: 8px;
@@ -55,7 +56,7 @@ button {
 
 /* Button Hover Effect */
 button:hover {
-    background-color: #45a049;
+    background-color: #0a6287;
     transform: scale(1.05);
 }
 

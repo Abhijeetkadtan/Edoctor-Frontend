@@ -1,0 +1,108 @@
+.doctor-management {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.doctor-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.form-group {
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+}
+
+.doctor-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.doctor-table th,
+.doctor-table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.doctor-table th {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+}
+
+.doctor-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #06c71c;
+    color: #fff;
+}
+
+.edit-btn:hover {
+    background-color: #2fc501;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}

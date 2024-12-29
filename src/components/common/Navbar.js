@@ -50,7 +50,7 @@ const Navbar = () => {
 
     return (
         <nav>
-            <Link to="/">Home</Link> {/* Logo or left-side link */}
+            <Link to="/">EDoctor</Link> {/* Logo or left-side link */}
             <div>
                 {user ? (
                     <>

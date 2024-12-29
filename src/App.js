@@ -134,8 +134,13 @@ import ResetPassword from "./components/auth/ResetPassword";
 import "./styles/Global.css";
 import Chatbot from "./components/common/Chatbot";
 import { useState, useEffect } from "react";
+import AdminLogin from "./components/admin/AdminLogin";
+import AdminDashboard from "./components/admin/AdminDashboard";
+import UserManagement from "./components/admin/UserManagement";
+import DoctorManagement from "./components/admin/DoctorManagement";
+import AppointmentManagement from "./components/admin/AppointmentManagement";
+const stripePromise = loadStripe("pk_test_51QXeFTFDMIdA4FuzzsO4Jmq7VpE2mqwCoPpMamfMS8beedzDkTLm66Mka5RNBtBkQcWxK3eV5kAE5IhVbibgqdT500SomfnAXX");
 
-const stripePromise = loadStripe("pk_test_51QXeFTFDMIdA4FuzzsO4Jmq7VpE2mqwCoPpMamfMS8beedzDkTLm66Mka5RNBtBkQcWxK3eV5kAE5IhVbibgqdT500SomfnAXX"); // Replace with your Stripe publishable key
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -153,10 +158,50 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/admin-login" element={<AdminLogin />} />
           <Route path="/verify-otp" element={<OtpVerification />} />
           <Route path="/login" element={<Login />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/reset-password/:resetToken" element={<ResetPassword />} />
+          <Route
+            path="/admin-dashboard/*"
+            element={
+              <ProtectedRoute allowedRoles={["ADMIN"]}>
+                <AdminDashboard />
+              </ProtectedRoute>
+            }
+          >
+            {/* Nested routes */}
+            <Route path="users" element={<UserManagement />} />
+            <Route path="doctors" element={<DoctorManagement />} />
+            <Route path="appointments" element={<AppointmentManagement />} />
+          </Route>
+
+
+          {/* <Route
+            path="/admin/users"
+            element={
+              <ProtectedRoute allowedRoles={["ADMIN"]}>
+                <UserManagement />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/doctors"
+            element={
+              <ProtectedRoute allowedRoles={["ADMIN"]}>
+                <DoctorManagement />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin/appointments"
+            element={
+              <ProtectedRoute allowedRoles={["ADMIN"]}>
+                <AppointmentManagement />
+              </ProtectedRoute>
+            }
+          /> */}
           <Route
             path="/patient-dashboard"
             element={
@@ -174,7 +219,7 @@ const App = () => {
             }
           />
           <Route
-            path="/appointments/schedule/:doctorId"
+            path="/appointments/schedule/:doctorId?"
             element={
               <ProtectedRoute allowedRoles={["PATIENT"]}>
                 <Elements stripe={stripePromise}>

@@ -71,10 +71,11 @@
 // export default Register;
 
 // src/components/auth/Register.js
+import "./Register.css";
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import './Register.css'; // Import the CSS file for styling
+// Import the CSS file for styling
 
 const Register = () => {
     const [formData, setFormData] = useState({

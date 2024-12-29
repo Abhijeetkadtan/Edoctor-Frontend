@@ -4,6 +4,8 @@
     background-image: url('https://img.freepik.com/free-vector/national-doctor-s-day-hand-drawn-background_23-2149438164.jpg?t=st=1734505897~exp=1734509497~hmac=5c0d2b97d6dc83df7c44e47effbf7f693ead6b1bbad7fe1f66c379302371e456&w=996');
     background-size: cover;
     background-position: center;
+    height: 100vh;
+  
 }
 
 .doctor-cards-container {

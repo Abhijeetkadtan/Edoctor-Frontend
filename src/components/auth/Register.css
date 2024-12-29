@@ -39,6 +39,15 @@
 /* Input field styling */
 .input-container input,
 .input-container select {
+    width: 94%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+.input-container select {
     width: 100%;
     padding: 12px;
     margin-top: 5px;
@@ -46,6 +55,7 @@
     border: 1px solid #ccc;
     font-size: 16px;
     outline: none;
+
 }
 
 /* Invalid input field styling (red border) */

@@ -1,0 +1,48 @@
+.admin-dashboard {
+    display: flex;
+    height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.admin-navbar {
+    width: 20%;
+    min-width: 200px;
+    background-color: #2c3e50;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.admin-navbar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 10px 1px;
+    margin: 50px 0;
+    border-radius: 4px;
+    display: block;
+    font-weight: bold;
+}
+
+.admin-navbar a:hover {
+    background-color: #34495e;
+}
+
+.admin-navbar a.active {
+    background-color: #16a085;
+    color: #fff;
+}
+
+.admin-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    background-image: url('https://img.freepik.com/free-vector/national-doctor-s-day-hand-drawn-background_23-2149438164.jpg?t=st=1734505897~exp=1734509497~hmac=5c0d2b97d6dc83df7c44e47effbf7f693ead6b1bbad7fe1f66c379302371e456&w=996');
+    background-size: cover;
+    background-position: center;
+}

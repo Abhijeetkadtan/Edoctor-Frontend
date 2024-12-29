@@ -5,7 +5,10 @@ body {
     padding: 0;
     background: #f0f2f5;
   }
-  
+  html, body {
+    height: 100%;
+    width: 100%;
+}
   .form-container {
     max-width: 400px;
     margin: 50px auto;
